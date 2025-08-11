@@ -7,10 +7,12 @@
 </head>
 <body>
       
-<h2>Tema: Compuertas Lógicas</h2>
+
+
+<h2>Tema: Arduino</h2>
 
  <h2>TÍTULO DE LA PRÁCTICA
-"Análisis y Simulación de Compuertas Lógicas Básicas (AND, OR y NOT)"</h2>
+"Encender un led si la distancia es mayor a 100cm y encender un alarma si la distancia es menor a 100cm"</h2>
 
  <h2>OBJETIVOS</h2>
 Objetivo General:
@@ -18,7 +20,6 @@ Objetivo General:
 <p>Analizar el comportamiento de las compuertas lógicas básicas mediante su construcción y simulación.</p>
 <br>
 Objetivos Específicos:
-<br>
 <br>
 •	Identificar las diferentes compuertas lógicas y sus símbolos.
 <br>
@@ -32,13 +33,16 @@ Objetivos Específicos:
 <br>
 •	Compuerta AND: Solo da salida alta cuando todas las entradas son altas.
 <br>
-<img src= "Captura de pantalla 2025-08-07 164824.png">
 •	Compuerta OR: Da salida alta si al menos una entrada es alta.
 <br>
-<img src="Captura de pantalla 2025-08-07 164847.png">
 •	Compuerta NOT: Invierte la entrada.
 <br>
-<img src="Captura de pantalla 2025-08-07 164915.png">
+(Puedes agregar aquí tablas de verdad y símbolos de cada una)
+
+<img src="captura.jpg" height="300" alt="">
+<br>
+
+<img src="img_comida.jpg" height="300" alt="image caida">
 
 
  <h2>MATERIALES Y EQUIPO</h2>
@@ -68,48 +72,20 @@ Objetivos Específicos:
 5.	(Opcional) Simular los mismos circuitos en software.
 
  <h2>TABLA DE RESULTADOS</h2>
-<iframe width="725" height="453" src="https://www.tinkercad.com/embed/llcYt50K9tz?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+Entrada A	Entrada B	Salida esperada	Salida real	Observaciones
+0	0	0	0	Funciona OK
+0	1	1	1	Funciona OK
+1	0	1	1	Funciona OK
+1	1	1	1	Funciona OK
+(Repite según compuerta lógica usada)
  <h2>ANÁLISIS Y DISCUSIÓN</h2>
 •	¿Coincidieron los resultados reales con los esperados?
 <br>
-<p>Sí, los resultados reales coincidieron con los esperados siempre que las conexiones fueron correctas y los valores lógicos de entrada se establecieron adecuadamente.
-Por ejemplo, en la compuerta AND, solo se encendieron los LEDs cuando ambas entradas eran 1, tal como indica la tabla de verdad.
-
-</p>
 •	¿Qué errores se presentaron?
 <br>
-<p>Algunos errores comunes durante la simulación o el armado del circuito fueron:
-
-Conexiones incorrectas entre pines del chip y los botones o LEDs.
-
-Confusión en la orientación del chip (por ejemplo, conectar mal Vcc o GND).
-
-No usar resistencias para limitar la corriente de los LEDs.
-
-No activar correctamente los conmutadores (switches), lo cual daba valores lógicos erróneos.</p>
 •	¿Qué sucede si no se conecta correctamente la alimentación del chip?
 <br>
-<p>Si no se conecta correctamente:
-
-El chip no funcionará: todas sus salidas pueden quedar en estado flotante (ni 0 ni 1 lógico).
-
-Pueden aparecer salidas erráticas o falsas, encendiendo LEDs sin lógica aparente.
-
-En algunos casos, puede dañarse el chip si se conectan mal Vcc y GND.
-
-Por eso es vital verificar que el pin de alimentación (por lo general, Vcc al pin 14 y GND al pin 7 en chips como el 74LS08 o 74LS32) esté bien conectado.
-
-</p>
 •	¿Cómo se interpreta una salida incorrecta?
-<p>Una salida incorrecta indica que algo en el circuito no está funcionando como debería. Esto puede significar:
-
-Una entrada no está en el nivel lógico correcto (0 o 1).
-
-Hay falsos contactos o cortocircuitos.
-
-La tabla de verdad no se está cumpliendo debido a un error en la conexión.
-
-El chip está mal alimentado o dañado.</p>
 
  <h2>CONCLUSIONES</h2>
 •	Las compuertas lógicas básicas pueden implementarse fácilmente con componentes TTL.
@@ -127,6 +103,9 @@ El chip está mal alimentado o dañado.</p>
 <br>
 •	Esquemas de conexión.
 
-<iframe width="725" height="453" src="https://www.tinkercad.com/embed/llcYt50K9tz?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+
+
 </body>
 </html>
