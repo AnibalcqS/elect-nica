@@ -14,97 +14,161 @@
  <h2>OBJETIVOS</h2>
 Objetivo General:
 <br>
-<p>Analizar el comportamiento de las compuertas lógicas básicas mediante su construcción y simulación.</p>
+<p>Analizar y comprender el funcionamiento de circuitos eléctricos en serie y paralelo mediante la simulación, aplicando leyes básicas de electricidad y comparando resultados teóricos con los obtenidos en el simulador.</p>
 <br>
 Objetivos Específicos:
 <br>
-•	Identificar las diferentes compuertas lógicas y sus símbolos.
+•	Identificar las características y diferencias entre las conexiones en serie y en paralelo.
 <br>
-•	Construir circuitos lógicos básicos utilizando compuertas.
+•	Aplicar la Ley de Ohm y las Leyes de Kirchhoff para calcular voltajes, corrientes y resistencias.
 <br>
-•	Verificar las tablas de verdad mediante simulación y práctica.
+•	Utilizar una herramienta de simulación para diseñar y evaluar circuitos.
 
 <h2>MARCO TEÓRICO</h2>
 
-(Explica brevemente cada compuerta. Puedes incluir un dibujo o tabla de verdad)
-<br>
-•	Compuerta AND: Solo da salida alta cuando todas las entradas son altas.
-<br>
-•	Compuerta OR: Da salida alta si al menos una entrada es alta.
-<br>
-•	Compuerta NOT: Invierte la entrada.
-<br>
-(Puedes agregar aquí tablas de verdad y símbolos de cada una)
 
-<img src="img_card1.jpg" height="300" alt="">
 <br>
+•	1 Circuito en serie
+<br>
+<P>Un circuito en serie es aquel en el que los componentes se conectan uno tras otro en una sola trayectoria de corriente.</P>
+<P>Corriente: igual en todos los componentes.
 
-<img src="img_comida.jpg" height="300" alt="image caida">
+𝐼
+total
+=
+𝐼
+1
+=
+𝐼
+2
+=
+…</P>
+<P>Voltaje total: suma de los voltajes parciales.
 
+𝑉
+total
+=
+𝑉
+1
++
+𝑉
+2
++
+…</P>
+<P>Resistencia equivalente:
+
+𝑅
+total
+=
+𝑅
+1
++
+𝑅
+2
++
+…</P>
+•	2 Circuito en paralelo
+<br>
+<P>Un circuito en paralelo es aquel en el que los componentes comparten los mismos puntos de conexión, formando ramas independientes para la corriente.</P>
+<P>Voltaje: igual en cada rama.
+
+𝑉
+total
+=
+𝑉
+1
+=
+𝑉
+2
+=
+…</P>
+<P>Corriente total: suma de las corrientes en cada rama.
+
+𝐼
+total
+=
+𝐼
+1
++
+𝐼
+2
++
+…</P>
+<P>Resistencia equivalente:
+
+1
+𝑅
+total
+=
+1
+𝑅
+1
++
+1
+𝑅
+2
++
+…</P>
+•	3 Ley de Ohm
+<br>
+<P>V=I×R
+Relaciona el voltaje (V), la corriente (I) y la resistencia (R).</P>
+•	4 Leyes de Kirchhoff
+<br>
+<P>Ley de corrientes (nodo): La suma de corrientes que entran a un nodo es igual a la suma de corrientes que salen.</P>
+<P>Ley de voltajes (malla): La suma de caídas de voltaje en un lazo cerrado es igual a la suma de voltajes suministrados.
+
+</P>
 
  <h2>MATERIALES Y EQUIPO</h2>
 •	Fuente de alimentación
 <br>
-•	Protoboard
+•	Plataforma de simulación (Tinkercad, Proteus, Multisim o similar).
 <br>
-•	Cables de conexión
+•	Fuente de voltaje de corriente continua (DC).
 <br>
-•	LEDs
+•	Resistencias de diferentes valores.
 <br>
 •	Resistencias
 <br>
-•	Chips lógicos (74LS08, 74LS32, 74LS04, etc.)
+•	Multímetro digital (en el simulador).
 <br>
-•	Multímetro (opcional)
+•	Cables de conexión virtuales.
 
  <h2>PROCEDIMIENTO</h2>
-1.	Conectar la compuerta lógica en el protoboard según el circuito.
-<br>
-2.	Alimentar adecuadamente el chip.
-<br>
-3.	Probar las diferentes combinaciones de entradas y observar la salida.
-<br>
-4.	Registrar resultados.
-<br>
-5.	(Opcional) Simular los mismos circuitos en software.
+<p><b>A) Circuito en serie</b><br>
+1. Abrir el simulador y colocar una fuente de voltaje DC.<br>
+2. Conectar tres resistencias en serie.<br>
+3. Medir con el multímetro el voltaje en cada resistencia y la corriente total.<br>
+4. Calcular valores teóricos con Ley de Ohm.<br>
+5. Comparar resultados teóricos y simulados.</p>
+
+<p><b>B) Circuito en paralelo</b><br>
+1. Utilizar la misma fuente de voltaje.<br>
+2. Conectar tres resistencias en paralelo.<br>
+3. Medir voltaje en cada resistencia y corriente en cada rama.<br>
+4. Calcular valores teóricos y comparar con los simulados.</p>
 
  <h2>TABLA DE RESULTADOS</h2>
-Entrada A	Entrada B	Salida esperada	Salida real	Observaciones
-0	0	0	0	Funciona OK
-0	1	1	1	Funciona OK
-1	0	1	1	Funciona OK
-1	1	1	1	Funciona OK
-(Repite según compuerta lógica usada)
-<iframe width="725" height="453" src="https://www.tinkercad.com/embed/deJ3O8FUJzz?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
- <h2>ANÁLISIS Y DISCUSIÓN</h2>
-•	¿Coincidieron los resultados reales con los esperados?
-<br>
-•	¿Qué errores se presentaron?
-<br>
-•	¿Qué sucede si no se conecta correctamente la alimentación del chip?
-<br>
-•	¿Cómo se interpreta una salida incorrecta?
 
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/gbMdaJCQQu6?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+ <h2>ANÁLISIS Y DISCUSIÓN</h2>
+<p>En la simulación del circuito en serie, se comprobó que la corriente es igual en todos los componentes y que la caída de voltaje depende del valor de la resistencia.<br>
+En el circuito en paralelo, se verificó que el voltaje es igual en cada rama, mientras que la corriente varía de acuerdo con la resistencia.<br>
+La resistencia equivalente en paralelo resultó menor que cualquiera de las resistencias individuales, lo que incrementa la corriente total.<br>
+Se confirmó que la simulación es una herramienta eficaz para aprender sin riesgos ni costos de materiales.</p>
  <h2>CONCLUSIONES</h2>
-•	Las compuertas lógicas básicas pueden implementarse fácilmente con componentes TTL.
-<br>
-•	El comportamiento real coincide con las tablas de verdad estudiadas.
-<br>
-•	La simulación ayuda a verificar antes de construir.
+<p>1. La simulación facilita la comprensión de conceptos eléctricos y la verificación de leyes fundamentales.<br>
+2. Los circuitos en serie presentan la misma corriente y caídas de voltaje proporcionales a la resistencia.<br>
+3. Los circuitos en paralelo mantienen igual voltaje en cada rama, pero corrientes diferentes.<br>
+4. La resistencia total en paralelo siempre es menor que la más pequeña del conjunto.<br>
+5. La simulación ayuda a detectar errores antes del montaje físico, optimizando tiempo y recursos.</p>
 
 <h2>ANEXOS</h2>
-•	Fotos del montaje físico.
-<br>
-•	Capturas de pantalla del simulador.
-<br>
-•	Tablas de verdad completas.
-<br>
-•	Esquemas de conexión.
 
 
 
-
-<iframe width="100%" height="453" src="https://www.tinkercad.com/embed/77mVKBWHovk?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/gbMdaJCQQu6?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 </body>
 </html>

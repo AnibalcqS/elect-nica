@@ -13,97 +13,79 @@
 "Teoria de conversion de binario a octal,hexadecimal,decimal y todos los sistemas numéricos"</h2>
 
  <h2>OBJETIVOS</h2>
-Objetivo General:
-<br>
-<p>Analizar el comportamiento de las compuertas lógicas básicas mediante su construcción y simulación.</p>
-<br>
-Objetivos Específicos:
-<br>
-•	Identificar las diferentes compuertas lógicas y sus símbolos.
-<br>
-•	Construir circuitos lógicos básicos utilizando compuertas.
-<br>
-•	Verificar las tablas de verdad mediante simulación y práctica.
+<p><b>Objetivo general:</b><br>
+Comprender los principios y procedimientos de conversión entre los sistemas numéricos más utilizados en computación y electrónica digital: binario, octal, decimal y hexadecimal.</p>
 
+<p><b>Objetivos específicos:</b><br>
+1. Identificar las características y bases de cada sistema numérico.<br>
+2. Aplicar métodos de conversión directa e indirecta entre los diferentes sistemas.<br>
+3. Relacionar las equivalencias entre binario, octal y hexadecimal.<br>
+4. Utilizar ejemplos prácticos para reforzar la comprensión de los procesos de conversión.</p>
 <h2>MARCO TEÓRICO</h2>
 
-(Explica brevemente cada compuerta. Puedes incluir un dibujo o tabla de verdad)
-<br>
-•	Compuerta AND: Solo da salida alta cuando todas las entradas son altas.
-<br>
-•	Compuerta OR: Da salida alta si al menos una entrada es alta.
-<br>
-•	Compuerta NOT: Invierte la entrada.
-<br>
-(Puedes agregar aquí tablas de verdad y símbolos de cada una)
+<p>Un <b>sistema numérico</b> es un conjunto de símbolos y reglas para representar cantidades. En informática y electrónica digital se utilizan principalmente cuatro:</p>
 
-<img src="img_card1.jpg" height="300" alt="">
-<br>
+<p><b>2.1 Sistema binario (base 2):</b><br>
+Utiliza solo dos dígitos: 0 y 1. Cada dígito se llama <i>bit</i>. Es el sistema que entienden las computadoras.<br>
+Ejemplo: 1011<sub>2</sub> representa el número 11 en decimal.</p>
 
-<img src="img_comida.jpg" height="300" alt="image caida">
+<p><b>2.2 Sistema octal (base 8):</b><br>
+Utiliza los dígitos del 0 al 7. Cada dígito octal equivale a tres bits binarios.<br>
+Ejemplo: 7<sub>8</sub> = 111<sub>2</sub>.</p>
 
+<p><b>2.3 Sistema decimal (base 10):</b><br>
+Utiliza los dígitos del 0 al 9. Es el sistema numérico usado comúnmente por los humanos.<br>
+Ejemplo: 145<sub>10</sub> = 10010001<sub>2</sub>.</p>
 
+<p><b>2.4 Sistema hexadecimal (base 16):</b><br>
+Utiliza 16 símbolos: del 0 al 9 y las letras A, B, C, D, E, F que representan los valores 10 a 15 en decimal.<br>
+Cada dígito hexadecimal equivale a cuatro bits binarios.<br>
+Ejemplo: F<sub>16</sub> = 1111<sub>2</sub>.</p>
  <h2>MATERIALES Y EQUIPO</h2>
-•	Fuente de alimentación
-<br>
-•	Protoboard
-<br>
-•	Cables de conexión
-<br>
-•	LEDs
-<br>
-•	Resistencias
-<br>
-•	Chips lógicos (74LS08, 74LS32, 74LS04, etc.)
-<br>
-•	Multímetro (opcional)
+<p>- Computadora o calculadora científica.<br>
+- Herramientas de simulación o software de conversión (Excel, aplicaciones web, etc.).<br>
+- Apuntes o tablas de equivalencia binario-octal-hexadecimal.<br>
+- Papel y lápiz para realizar conversiones manuales.</p>
 
  <h2>PROCEDIMIENTO</h2>
-1.	Conectar la compuerta lógica en el protoboard según el circuito.
-<br>
-2.	Alimentar adecuadamente el chip.
-<br>
-3.	Probar las diferentes combinaciones de entradas y observar la salida.
-<br>
-4.	Registrar resultados.
-<br>
-5.	(Opcional) Simular los mismos circuitos en software.
+<p><b>A) Conversión de binario a octal:</b><br>
+1. Agrupar los bits en grupos de tres desde la derecha.<br>
+2. Convertir cada grupo en su equivalente octal.<br>
+Ejemplo: 101110<sub>2</sub> = (101)(110) = 5 6 = 56<sub>8</sub>.</p>
 
+<p><b>B) Conversión de binario a hexadecimal:</b><br>
+1. Agrupar los bits en grupos de cuatro desde la derecha.<br>
+2. Convertir cada grupo a su valor hexadecimal.<br>
+Ejemplo: 11010111<sub>2</sub> = (1101)(0111) = D7<sub>16</sub>.</p>
+
+<p><b>C) Conversión de binario a decimal:</b><br>
+1. Multiplicar cada bit por 2 elevado a su posición, contando desde 0 a la derecha.<br>
+2. Sumar los resultados.<br>
+Ejemplo: 1011<sub>2</sub> = (1×2³) + (0×2²) + (1×2¹) + (1×2⁰) = 8 + 0 + 2 + 1 = 11<sub>10</sub>.</p>
+
+<p><b>D) Conversión de octal a binario:</b><br>
+1. Convertir cada dígito octal en su equivalente binario de tres bits.<br>
+Ejemplo: 45<sub>8</sub> = (100)(101) = 100101<sub>2</sub>.</p>
+
+<p><b>E) Conversión de hexadecimal a binario:</b><br>
+1. Convertir cada dígito hexadecimal a su equivalente binario de cuatro bits.<br>
+Ejemplo: 3F<sub>16</sub> = (0011)(1111) = 00111111<sub>2</sub>.</p>
  <h2>TABLA DE RESULTADOS</h2>
-Entrada A	Entrada B	Salida esperada	Salida real	Observaciones
-0	0	0	0	Funciona OK
-0	1	1	1	Funciona OK
-1	0	1	1	Funciona OK
-1	1	1	1	Funciona OK
-(Repite según compuerta lógica usada)
-<iframe width="725" height="453" src="https://www.tinkercad.com/embed/deJ3O8FUJzz?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
- <h2>ANÁLISIS Y DISCUSIÓN</h2>
-•	¿Coincidieron los resultados reales con los esperados?
-<br>
-•	¿Qué errores se presentaron?
-<br>
-•	¿Qué sucede si no se conecta correctamente la alimentación del chip?
-<br>
-•	¿Cómo se interpreta una salida incorrecta?
 
+ <h2>ANÁLISIS Y DISCUSIÓN</h2>
+<p>Las conversiones entre sistemas numéricos son fundamentales en programación, diseño digital y arquitectura de computadores. El binario es la base de todo procesamiento, mientras que el octal y hexadecimal facilitan la representación compacta de valores binarios.<br>
+Se comprobó que las conversiones binarias a octal y hexadecimal son rápidas debido a que las bases 8 y 16 son potencias de 2, lo que permite hacer grupos de bits sin operaciones intermedias.<br>
+Las conversiones que involucran decimal requieren operaciones de multiplicación y suma (o división y residuo en sentido inverso).</p>
  <h2>CONCLUSIONES</h2>
-•	Las compuertas lógicas básicas pueden implementarse fácilmente con componentes TTL.
-<br>
-•	El comportamiento real coincide con las tablas de verdad estudiadas.
-<br>
-•	La simulación ayuda a verificar antes de construir.
+<p>1. El sistema binario es la base de todos los cálculos en computadoras y sistemas digitales.<br>
+2. Las bases 8 y 16 se utilizan para simplificar la lectura y escritura de valores binarios.<br>
+3. El sistema decimal, aunque no es usado internamente por los computadores, es necesario para la interacción con el usuario.<br>
+4. Dominar las técnicas de conversión permite programar y diseñar hardware de forma más eficiente.<br>
+5. Las herramientas digitales facilitan el proceso, pero conocer el método manual asegura la comprensión total del tema.</p>
 
 <h2>ANEXOS</h2>
-•	Fotos del montaje físico.
-<br>
-•	Capturas de pantalla del simulador.
-<br>
-•	Tablas de verdad completas.
-<br>
-•	Esquemas de conexión.
 
 
-<iframe width="100%" height="453" src="https://www.tinkercad.com/embed/77mVKBWHovk?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 </body>
 </html>
