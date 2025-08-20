@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      
+
+
+<h2>Tema: Arduino</h2>
+
+<h2>TÍTULO DE LA PRÁCTICA</h2> <p>"Control de acceso con keypad 4x4, LED y buzzer en Arduino"</p> <h2>OBJETIVOS</h2>
+
+Objetivo General:
+
+<p>Diseñar y programar un sistema de control de acceso con Arduino que permita ingresar un código mediante un keypad 4x4 y activar un LED o un buzzer según la validez del código.</p>
+
+Objetivos Específicos:
+
+Aprender a leer entradas desde un keypad 4x4 con Arduino.
+
+Mostrar los números ingresados en un LCD.
+
+Activar un LED si el código ingresado es correcto.
+
+Activar un buzzer si el código ingresado es incorrecto.
+
+Registrar y verificar el funcionamiento del sistema.
+
+<h2>MARCO TEÓRICO</h2>
+
+Keypad 4x4:
+
+Dispositivo con 16 teclas dispuestas en 4 filas y 4 columnas.
+
+Se conecta a Arduino leyendo filas y columnas para detectar la tecla presionada.
+
+LCD 16x2:
+
+Se utiliza para mostrar los números ingresados por el usuario y mensajes de estado (correcto/incorrecto).
+
+LED y Buzzer:
+
+LED indica código correcto.
+
+Buzzer indica código incorrecto.
+
+Lógica del proyecto:
+
+El usuario ingresa un código de N dígitos.
+
+Arduino compara el código ingresado con el código almacenado.
+
+Si coincide → LED encendido y mensaje “ACCESO OK” en LCD.
+
+Si no coincide → Buzzer activado y mensaje “ERROR” en LCD.
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/gaMjQbehwVr?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<h2>MATERIALES Y EQUIPO</h2> - Arduino Uno o similar - Keypad 4x4 - Pantalla LCD 16x2 - LED con resistencia 220 Ω - Buzzer - Protoboard y cables de conexión - Fuente de alimentación USB o externa <h2>PROCEDIMIENTO</h2> 1. Conectar el keypad al Arduino (pines para filas y columnas). 2. Conectar el LCD según el esquema de 16x2. 3. Conectar LED con resistencia a un pin digital. 4. Conectar buzzer a un pin digital. 5. Programar Arduino para: - Leer el código ingresado en el keypad. - Mostrar cada número ingresado en el LCD. - Comparar el código ingresado con el código correcto predefinido. - Encender LED si el código es correcto. - Activar buzzer si el código es incorrecto. 6. Probar ingresando códigos correctos e incorrectos y registrar los resultados. <h2>TABLA DE RESULTADOS</h2>
+Código ingresado	Resultado	LED encendido	Buzzer activado	Observaciones
+1234	Correcto	Sí	No	Funciona OK
+4321	Incorrecto	No	Sí	Funciona OK
+0000	Incorrecto	No	Sí	Funciona OK
+9876	Correcto	Sí	No	Funciona OK
+<h2>ANÁLISIS Y DISCUSIÓN</h2> - ¿Se detectaron correctamente las teclas del keypad? - ¿Se mostró el código ingresado en el LCD correctamente? - ¿El LED y el buzzer respondieron adecuadamente según la validez del código? - ¿Qué problemas se presentaron al comparar los códigos o al actualizar el LCD? <h2>CONCLUSIONES</h2> - Es posible controlar un sistema de acceso con Arduino, keypad, LCD, LED y buzzer. - La programación permite validar códigos ingresados y dar retroalimentación visual y sonora. - La práctica refuerza la integración de entradas (keypad) y salidas (LCD, LED, buzzer) en un proyecto funcional. <h2>ANEXOS</h2> - Fotos del montaje físico. - Captura del código cargado en Arduino. - Esquema de conexión del keypad, LCD, LED y buzzer. - Código fuente completo del proyecto.
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/gaMjQbehwVr?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+</body>
+</html>

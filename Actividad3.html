@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      
+
+
+<h2>Tema: Arduino</h2>
+
+<h2>TÍTULO DE LA PRÁCTICA</h2> <p>"Mostrar nombre y apellido más 4 caracteres en las 4 esquinas del LCD"</p> <h2>OBJETIVOS</h2>
+
+Objetivo General:
+
+<p>Diseñar y programar un circuito con Arduino que muestre información personalizada en las cuatro esquinas de un display LCD.</p>
+
+Objetivos Específicos:
+
+Aprender a manejar un LCD con Arduino.
+
+Mostrar nombre y apellido en el LCD.
+
+Colocar caracteres adicionales en cada esquina de la pantalla.
+
+Verificar la correcta visualización de los datos en el display.
+
+<h2>MARCO TEÓRICO</h2>
+
+Pantalla LCD 16x2:
+
+Permite mostrar texto en dos líneas de 16 caracteres cada una.
+
+Se controla mediante pines de datos y control (RS, EN, D4-D7).
+
+Funciones principales de Arduino para LCD:
+
+lcd.begin(16, 2) → Inicializa el LCD con 16 columnas y 2 filas.
+
+lcd.setCursor(columna, fila) → Ubica el cursor en la posición deseada.
+
+lcd.print("texto") → Muestra texto en la posición actual del cursor.
+
+Lógica del proyecto:
+
+Mostrar nombre y apellido centrado o en las posiciones deseadas.
+
+Colocar un carácter especial o letra en cada esquina usando lcd.setCursor.
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/5iqzOiisR1i?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<h2>MATERIALES Y EQUIPO</h2> - Arduino Uno o similar - Pantalla LCD 16x2 - Potenciómetro de 10 kΩ (para ajuste de contraste) - Protoboard y cables de conexión - Fuente de alimentación USB o externa <h2>PROCEDIMIENTO</h2> 1. Conectar el LCD al Arduino: - VSS a GND, VDD a 5V, V0 a potenciómetro (contraste), RS, EN y D4-D7 a pines digitales. 2. Inicializar la pantalla con `lcd.begin(16,2)`. 3. Colocar el cursor en cada esquina y mostrar un carácter: - Esquina superior izquierda `(0,0)` - Esquina superior derecha `(15,0)` - Esquina inferior izquierda `(0,1)` - Esquina inferior derecha `(15,1)` 4. Escribir nombre y apellido en la línea central o según diseño. 5. Probar y verificar que los caracteres aparecen en las posiciones correctas. <h2>TABLA DE RESULTADOS</h2>
+Posición en LCD	Contenido mostrado	Observaciones
+(0,0) Superior izquierda	A	Funciona OK
+(15,0) Superior derecha	B	Funciona OK
+(0,1) Inferior izquierda	C	Funciona OK
+(15,1) Inferior derecha	D	Funciona OK
+Línea central	Nombre Apellido	Funciona OK
+<h2>ANÁLISIS Y DISCUSIÓN</h2> - ¿Se mostraron los caracteres correctamente en las esquinas? - ¿Qué pasa si se coloca un carácter fuera del rango de 0-15 columnas? - ¿Cómo afecta el contraste a la visibilidad del LCD? - ¿Qué problemas se presentaron al conectar el LCD o al programar? <h2>CONCLUSIONES</h2> - Es posible mostrar información personalizada en posiciones específicas del LCD. - La función `lcd.setCursor` permite controlar cada posición de manera precisa. - La práctica ayuda a comprender la comunicación entre Arduino y pantallas LCD. - Se puede combinar texto fijo y dinámico para crear interfaces interactivas. <h2>ANEXOS</h2> - Fotos del montaje físico. - Captura del código cargado en Arduino. - Esquema de conexión del LCD. - Código fuente del proyecto.
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/5iqzOiisR1i?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</body>
+</html>

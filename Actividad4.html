@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      
+
+
+<h2>Tema: Arduino</h2>
+
+<h2>TÍTULO DE LA PRÁCTICA</h2> <p>"Visualización de distancia medida en un LCD con Arduino"</p> <h2>OBJETIVOS</h2>
+
+Objetivo General:
+
+<p>Diseñar y programar un circuito con Arduino que muestre la distancia medida por un sensor en un LCD, mostrando texto descriptivo y valor numérico concatenado con la unidad de medida.</p>
+
+Objetivos Específicos:
+
+Conocer el funcionamiento de un sensor de distancia ultrasónico (HC-SR04).
+
+Aprender a mostrar información en un LCD utilizando Arduino.
+
+Mostrar texto fijo en la primera fila y valores dinámicos en la segunda fila.
+
+Concatenar números con texto (“cm”) para una visualización clara.
+
+<h2>MARCO TEÓRICO</h2>
+
+Sensor ultrasónico HC-SR04:
+
+Mide la distancia mediante ondas ultrasónicas.
+
+Fórmula para calcular distancia:
+
+Distancia (cm)
+=
+Tiempo de ida y vuelta (µs)
+58
+Distancia (cm)=
+58
+Tiempo de ida y vuelta (µs)
+	​
+
+
+Pantalla LCD 16x2:
+
+Dos filas de 16 caracteres cada una.
+
+Funciones importantes:
+
+lcd.begin(16,2) → inicializa el LCD.
+
+lcd.setCursor(columna, fila) → posiciona el cursor.
+
+lcd.print("texto") → muestra texto o valores.
+
+Lógica del proyecto:
+
+Primera fila: mostrar palabra fija “Distancia”.
+
+Segunda fila: mostrar valor medido concatenado con “cm”.
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/9I2EQdySmxj?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<h2>MATERIALES Y EQUIPO</h2> - Arduino Uno o similar - Sensor ultrasónico HC-SR04 - Pantalla LCD 16x2 - Potenciómetro de 10 kΩ (contraste LCD) - Protoboard y cables de conexión - Fuente de alimentación USB o externa <h2>PROCEDIMIENTO</h2> 1. Conectar el sensor HC-SR04 al Arduino (VCC, GND, Trig, Echo). 2. Conectar el LCD al Arduino (VSS, VDD, V0 a potenciómetro, RS, EN, D4-D7). 3. Inicializar el LCD con `lcd.begin(16,2)`. 4. En el loop principal del programa: - Medir la distancia con el sensor. - Mostrar en la primera fila: `lcd.setCursor(0,0); lcd.print("Distancia");` - Mostrar en la segunda fila: `lcd.setCursor(0,1); lcd.print(distancia); lcd.print(" cm");` 5. Probar diferentes distancias y verificar que el valor se actualiza correctamente en la segunda fila. <h2>TABLA DE RESULTADOS</h2>
+Distancia medida (cm)	LCD fila 1	LCD fila 2	Observaciones
+50	Distancia	50 cm	Funciona OK
+75	Distancia	75 cm	Funciona OK
+100	Distancia	100 cm	Funciona OK
+120	Distancia	120 cm	Funciona OK
+<h2>ANÁLISIS Y DISCUSIÓN</h2> - ¿Se muestra correctamente la palabra “Distancia” en la primera fila? - ¿Los valores numéricos se actualizan dinámicamente en la segunda fila? - ¿Qué ocurre si se mide una distancia mayor a 255 cm (valor máximo de byte)? - ¿Cómo afecta el contraste del LCD a la visibilidad de los caracteres? <h2>CONCLUSIONES</h2> - Es posible mostrar texto fijo y valores dinámicos en un LCD de manera clara. - La concatenación de números con unidades de medida facilita la interpretación de datos. - La práctica permite integrar sensores ultrasónicos con pantallas LCD y mostrar información en tiempo real. - Se refuerza el manejo de funciones de Arduino para mostrar texto y valores numéricos. <h2>ANEXOS</h2> - Fotos del montaje físico. - Captura del código cargado en Arduino. - Esquema de conexión del sensor y LCD. - Código fuente completo.
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/9I2EQdySmxj?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+</body>
+</html>
