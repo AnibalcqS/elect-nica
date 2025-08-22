@@ -1,14 +1,14 @@
-# Proyecto de Sistemas Numéricos
+## Proyecto de Sistemas Numéricos
 
 Este proyecto documenta la práctica de **Sistemas Numéricos**, incluyendo la teoría, procedimiento y resultados obtenidos en las simulaciones y ejercicios.
 
----
+
 
 ## Tema del Proyecto
 
 **Sistemas Numéricos:** Análisis y práctica de conversión y operaciones entre sistemas binario, octal, decimal y hexadecimal.
 
----
+
 
 ## Objetivos
 
@@ -21,7 +21,7 @@ Comprender y aplicar los sistemas numéricos para la representación de informac
 - Aplicar operaciones matemáticas en diferentes bases numéricas.  
 - Desarrollar habilidades en la interpretación y análisis de información digital.
 
----
+
 
 ## Marco Teórico
 
@@ -30,7 +30,7 @@ Comprender y aplicar los sistemas numéricos para la representación de informac
 - **Sistema Decimal (Base 10):** Sistema numérico que usamos diariamente (0-9).  
 - **Sistema Hexadecimal (Base 16):** Usa dígitos 0-9 y letras A-F. Muy útil en programación y electrónica digital.
 
----
+
 
 ## Materiales y Herramientas
 
@@ -39,7 +39,7 @@ Comprender y aplicar los sistemas numéricos para la representación de informac
 - Editor de código (VS Code, Sublime Text, etc.).  
 - Opcional: Diagramas de flujo o esquemas digitales.
 
----
+
 
 ## Procedimiento
 
