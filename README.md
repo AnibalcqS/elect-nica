@@ -1,99 +1,89 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README - Convertidor de Sistemas Numéricos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            color: #0056b3;
-        }
-        .base {
-            font-weight: bold;
-        }
-        .binario { color: #ff5733; }
-        .octal { color: #33c1ff; }
-        .decimal { color: #28a745; }
-        .hexadecimal { color: #ff33d1; }
-        pre {
-            background-color: #eee;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        code {
-            color: #c7254e;
-        }
-    </style>
-</head>
-<body>
-    <img src="Imagen1.jpg" height="300" alt="">
-<br>
-    <h1>Convertidor de Sistemas Numéricos</h1>
+# Proyecto de Sistemas Numéricos
 
-    <h2>Descripción</h2>
-    <p>Aplicación en <strong>Python</strong> que convierte números entre diferentes sistemas numéricos: 
-    <span class="base binario">Binario</span>, 
-    <span class="base octal">Octal</span>, 
-    <span class="base decimal">Decimal</span> y 
-    <span class="base hexadecimal">Hexadecimal</span>. 
-    Incluye interfaz gráfica con <strong>Tkinter</strong> y colores diferenciados para cada base.</p>
+Este proyecto documenta la práctica de **Sistemas Numéricos**, incluyendo la teoría, procedimiento y resultados obtenidos en las simulaciones y ejercicios.
 
-    <h2>Funcionalidades</h2>
-    <ul>
-        <li>Ingresar números en <span class="base binario">Binario</span>, <span class="base octal">Octal</span>, <span class="base decimal">Decimal</span> o <span class="base hexadecimal">Hexadecimal</span>.</li>
-        <li>Convertir automáticamente a las otras tres bases.</li>
-        <li>Mostrar resultados con colores según la base.</li>
-        <li>Manejo de errores si el número ingresado no corresponde a la base seleccionada.</li>
-    </ul>
+---
 
-    <h2>Tecnologías</h2>
-    <ul>
-        <li>Python 3.x</li>
-        <li>Tkinter (Interfaz gráfica)</li>
-        <li>Compatible con Windows, Linux y macOS</li>
-    </ul>
+## Tema del Proyecto
 
-    <h2>Instalación</h2>
-    <ol>
-        <li>Instalar Python 3: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a></li>
-        <li>Clonar o descargar este proyecto en tu computadora.</li>
-        <li>Abrir el proyecto en <strong>Visual Studio Code</strong>.</li>
-        <li>Ejecutar el archivo principal:
-            <pre><code>python convertidor.py</code></pre>
-        </li>
-    </ol>
+**Sistemas Numéricos:** Análisis y práctica de conversión y operaciones entre sistemas binario, octal, decimal y hexadecimal.
 
-    <h2>Uso</h2>
-    <ol>
-        <li>Escribir un número en el campo de entrada.</li>
-        <li>Seleccionar la base del número ingresado.</li>
-        <li>Presionar <strong>Convertir</strong>.</li>
-        <li>Ver los resultados en las otras tres bases con colores.</li>
-    </ol>
-<img src="Captura de pantalla 2025-08-21 210509.png" height="300" alt="">
+---
+
+## Objetivos
+
+### Objetivo General
+Comprender y aplicar los sistemas numéricos para la representación de información y su uso en el desarrollo de soluciones computacionales.
+
+### Objetivos Específicos
+- Identificar y diferenciar los sistemas numéricos más comunes: binario, octal, decimal y hexadecimal.  
+- Realizar conversiones entre los distintos sistemas numéricos.  
+- Aplicar operaciones matemáticas en diferentes bases numéricas.  
+- Desarrollar habilidades en la interpretación y análisis de información digital.
+
+---
+
+## Marco Teórico
+
+- **Sistema Binario (Base 2):** Solo usa los dígitos 0 y 1. Es la base de la informática.  
+- **Sistema Octal (Base 8):** Utiliza los dígitos del 0 al 7.  
+- **Sistema Decimal (Base 10):** Sistema numérico que usamos diariamente (0-9).  
+- **Sistema Hexadecimal (Base 16):** Usa dígitos 0-9 y letras A-F. Muy útil en programación y electrónica digital.
+
+---
+
+## Materiales y Herramientas
+
+- Computadora con software de simulación o calculadora de sistemas numéricos.  
+- Archivos de práctica en formato HTML o PDF.  
+- Editor de código (VS Code, Sublime Text, etc.).  
+- Opcional: Diagramas de flujo o esquemas digitales.
+
+---
+
+## Procedimiento
+
+1. Analizar los ejercicios de conversión y operaciones entre sistemas numéricos.  
+2. Implementar los ejemplos en el archivo HTML de práctica (o software de simulación).  
+3. Registrar los resultados de las operaciones.  
+4. Comparar resultados con las soluciones esperadas.  
+5. Documentar conclusiones y observaciones.
+
+---
+
+## Resultados
+
+- Se realizaron conversiones entre los sistemas:  
+  - Binario ↔ Decimal  
+  - Decimal ↔ Hexadecimal  
+  - Binario ↔ Octal  
+- Se verificó que los resultados coinciden con la teoría de cada sistema numérico.
+
+---
+
+## Análisis y Discusión
+
+- Las conversiones permiten interpretar datos digitales en distintos formatos.  
+- La práctica refuerza el conocimiento de cómo las computadoras representan información.  
+- Se observó que los errores suelen ocurrir por confusión de bases o dígitos válidos.
+
+---
+
+## Conclusiones
+
+- Los sistemas numéricos son fundamentales en informática y electrónica digital.  
+- La práctica permite comprender el funcionamiento interno de los sistemas de cómputo.  
+- La documentación clara y organizada facilita la revisión y análisis de resultados.
+
+---
+
+## Archivos del Proyecto
+
+- [Archivo HTML de la práctica](./REPOSITORIO.html)  
+- Imágenes y capturas de resultados:
+- <img src="Captura de pantalla 2025-08-21 210509.png" height="300" alt="">
 <br>
 <img src="Captura de pantalla 2025-08-21 210746.png" height="600" alt="">
 <br>
 <img src="Captura de pantalla 2025-08-21 210759.png" height="300" alt="">
 <br>
-    <h2>Ejemplo</h2>
-    <p>Entrada: <code>1010</code></p>
-    <p>Base seleccionada: <span class="base binario">Binario</span></p>
-    <p>Resultados:</p>
-    <ul>
-        <li>Decimal: <span class="decimal">10</span></li>
-        <li>Octal: <span class="octal">12</span></li>
-        <li>Hexadecimal: <span class="hexadecimal">A</span></li>
-    </ul>
-
-    <h2>Autor</h2>
-    <p><strong>SEGUNDO COBACANGO</strong><br></p>
-</body>
-</html>
