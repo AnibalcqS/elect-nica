@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README - Convertidor de Sistemas Numéricos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        .base {
+            font-weight: bold;
+        }
+        .binario { color: #ff5733; }
+        .octal { color: #33c1ff; }
+        .decimal { color: #28a745; }
+        .hexadecimal { color: #ff33d1; }
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        code {
+            color: #c7254e;
+        }
+    </style>
+</head>
+<body>
+    <img src="Imagen1.jpg" height="300" alt="">
+<br>
+    <h1>Convertidor de Sistemas Numéricos</h1>
+
+    <h2>Descripción</h2>
+    <p>Aplicación en <strong>Python</strong> que convierte números entre diferentes sistemas numéricos: 
+    <span class="base binario">Binario</span>, 
+    <span class="base octal">Octal</span>, 
+    <span class="base decimal">Decimal</span> y 
+    <span class="base hexadecimal">Hexadecimal</span>. 
+    Incluye interfaz gráfica con <strong>Tkinter</strong> y colores diferenciados para cada base.</p>
+
+    <h2>Funcionalidades</h2>
+    <ul>
+        <li>Ingresar números en <span class="base binario">Binario</span>, <span class="base octal">Octal</span>, <span class="base decimal">Decimal</span> o <span class="base hexadecimal">Hexadecimal</span>.</li>
+        <li>Convertir automáticamente a las otras tres bases.</li>
+        <li>Mostrar resultados con colores según la base.</li>
+        <li>Manejo de errores si el número ingresado no corresponde a la base seleccionada.</li>
+    </ul>
+
+    <h2>Tecnologías</h2>
+    <ul>
+        <li>Python 3.x</li>
+        <li>Tkinter (Interfaz gráfica)</li>
+        <li>Compatible con Windows, Linux y macOS</li>
+    </ul>
+
+    <h2>Instalación</h2>
+    <ol>
+        <li>Instalar Python 3: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a></li>
+        <li>Clonar o descargar este proyecto en tu computadora.</li>
+        <li>Abrir el proyecto en <strong>Visual Studio Code</strong>.</li>
+        <li>Ejecutar el archivo principal:
+            <pre><code>python convertidor.py</code></pre>
+        </li>
+    </ol>
+
+    <h2>Uso</h2>
+    <ol>
+        <li>Escribir un número en el campo de entrada.</li>
+        <li>Seleccionar la base del número ingresado.</li>
+        <li>Presionar <strong>Convertir</strong>.</li>
+        <li>Ver los resultados en las otras tres bases con colores.</li>
+    </ol>
+<img src="Captura de pantalla 2025-08-21 210509.png" height="300" alt="">
+<br>
+<img src="Captura de pantalla 2025-08-21 210746.png" height="600" alt="">
+<br>
+<img src="Captura de pantalla 2025-08-21 210759.png" height="300" alt="">
+<br>
+    <h2>Ejemplo</h2>
+    <p>Entrada: <code>1010</code></p>
+    <p>Base seleccionada: <span class="base binario">Binario</span></p>
+    <p>Resultados:</p>
+    <ul>
+        <li>Decimal: <span class="decimal">10</span></li>
+        <li>Octal: <span class="octal">12</span></li>
+        <li>Hexadecimal: <span class="hexadecimal">A</span></li>
+    </ul>
+
+    <h2>Autor</h2>
+    <p><strong>SEGUNDO COBACANGO</strong><br></p>
+</body>
+</html>
