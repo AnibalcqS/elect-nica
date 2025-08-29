@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Etiquetas HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tarea 2: Página de ejemplos con etiquetas HTML</h1>
+    <p>En esta página aprenderás para qué sirve cada etiqueta de HTML y verás un ejemplo de uso.</p>
+
+    <hr>
+
+    <!-- Ejemplos de etiquetas básicas -->
+    <section>
+        <h2>1. Encabezados &lt;h1&gt; a &lt;h6&gt;</h2>
+        <p>Sirven para definir títulos con distintos niveles de importancia.</p>
+        <h3>Ejemplo:</h3>
+        <h4>Este es un encabezado h4</h4>
+    </section>
+
+    <section>
+        <h2>2. Párrafo &lt;p&gt;</h2>
+        <p>Sirve para escribir bloques de texto.</p>
+        <h3>Ejemplo:</h3>
+        <p>Este es un párrafo de ejemplo en HTML.</p>
+    </section>
+
+    <section>
+        <h2>3. Enlaces &lt;a&gt;</h2>
+        <p>Sirven para dirigir a otra página o recurso.</p>
+        <h3>Ejemplo:</h3>
+        <a href="https://www.google.com" target="_blank">Ir a Google</a>
+    </section>
+
+    <section>
+        <h2>4. Imágenes &lt;img&gt;</h2>
+        <p>Muestra imágenes en la página.</p>
+        <h3>Ejemplo:</h3>
+        <img src="image web.jpeg" alt="ejemplo">
+    </section>
+
+    <section>
+        <h2>5. Listas &lt;ul&gt; y &lt;ol&gt;</h2>
+        <p>Se usan para agrupar elementos en lista.</p>
+        <h3>Ejemplo:</h3>
+        <ul>
+            <li>Elemento en lista no ordenada</li>
+            <li>Otro elemento</li>
+        </ul>
+        <ol>
+            <li>Primer paso</li>
+            <li>Segundo paso</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>6. Tablas &lt;table&gt;</h2>
+        <p>Se usan para mostrar información tabulada.</p>
+        <h3>Ejemplo:</h3>
+        <table border="1">
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>22</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- 10 etiquetas nuevas -->
+    <h2>Etiquetas nuevas</h2>
+
+    <section>
+        <h3>1. &lt;video&gt;</h3>
+        <p>Permite insertar videos en la página.</p>
+        <video controls width="300">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section>
+        <h3>2. &lt;audio&gt;</h3>
+        <p>Permite reproducir audio.</p>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+    <section>
+        <h3>3. &lt;canvas&gt;</h3>
+        <p>Se usa para dibujar gráficos dinámicos con JavaScript.</p>
+        <canvas id="miCanvas" width="200" height="100"></canvas>
+        <script>
+            let c = document.getElementById("miCanvas");
+            let ctx = c.getContext("2d");
+            ctx.fillStyle = "blue";
+            ctx.fillRect(20, 20, 150, 60);
+        </script>
+    </section>
+
+    <section>
+        <h3>4. &lt;figure&gt; y &lt;figcaption&gt;</h3>
+        <p>Se usan para asociar imágenes con descripciones.</p>
+        <figure>
+            <img src="caption.jpeg" alt="caption">
+            <figcaption>Figura 1: Imagen con descripción.</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h3>5. &lt;progress&gt;</h3>
+        <p>Muestra el progreso de una tarea.</p>
+        <progress value="60" max="100"></progress>
+    </section>
+
+    <section>
+        <h3>6. &lt;meter&gt;</h3>
+        <p>Muestra un valor dentro de un rango.</p>
+        <meter value="0.6" min="0" max="1">60%</meter>
+    </section>
+
+    <section>
+        <h3>7. &lt;details&gt; y &lt;summary&gt;</h3>
+        <p>Permite crear secciones desplegables.</p>
+        <details>
+            <summary>Haz clic aquí</summary>
+            <p>Este es el contenido oculto que aparece al desplegar.</p>
+        </details>
+    </section>
+
+    <section>
+        <h3>8. &lt;mark&gt;</h3>
+        <p>Resalta texto importante.</p>
+        <p>Ejemplo: HTML es <mark>muy importante</mark> en el desarrollo web.</p>
+    </section>
+
+   
+</body>
+</html>
