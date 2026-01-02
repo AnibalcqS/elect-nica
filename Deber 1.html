@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea: Sentencias de Control</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --code-bg: #1e1e1e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        h1 { color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 10px; }
+        h2 { color: var(--primary); margin-top: 30px; }
+        
+        pre {
+            background-color: var(--code-bg);
+            color: #dcdcdc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+
+        .exercise-box {
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f1f5f9;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover { background-color: #1d4ed8; }
+
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #059669;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Sentencias de Control en Programación</h1>
+    
+    <section>
+        <h2>1. ¿Qué son las Sentencias de Control?</h2>
+        <p>Las sentencias de control permiten controlar el flujo de ejecución de un programa. Sin ellas, el código se ejecutaría de forma estrictamente secuencial. Gracias a estas estructuras, el software puede tomar decisiones y realizar tareas repetitivas de forma eficiente.</p>
+        
+    </section>
+
+    <section>
+        <h2>2. Sintaxis Fundamental</h2>
+        
+        <h3>A. Condicional If / Else</h3>
+        <p>Evalúa si una condición es verdadera para ejecutar un bloque de código.</p>
+        <pre>
+if (condicion) {
+    // código si es verdadero
+} else {
+    // código si es falso
+}</pre>
+
+        <h3>B. Bucle For</h3>
+        <p>Repite un bloque de código un número determinado de veces.</p>
+        <pre>
+for (let i = 0; i < 5; i++) {
+    // código que se repite 5 veces
+}</pre>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>3. Ejercicios Prácticos</h2>
+
+        <div class="exercise-box">
+            <h3>Ejercicio 1: Verificador de Edad</h3>
+            <p>Ingresa una edad para saber si es mayor de edad (18+):</p>
+            <input type="number" id="inputEdad" placeholder="Ej: 20">
+            <button onclick="verificarEdad()">Verificar</button>
+            <div id="resEdad" class="result"></div>
+        </div>
+
+        <div class="exercise-box">
+            <h3>Ejercicio 2: Tabla del 5</h3>
+            <p>Haz clic para generar la tabla de multiplicar del 5 usando un bucle <code>for</code>:</p>
+            <button onclick="generarTabla()">Generar Tabla</button>
+            <div id="resTabla" class="result" style="white-space: pre-line;"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+    // Lógica del Ejercicio 1
+    function verificarEdad() {
+        const edad = document.getElementById('inputEdad').value;
+        const res = document.getElementById('resEdad');
+        
+        if (edad === "") {
+            res.innerText = "Por favor, ingresa un número.";
+            return;
+        }
+
+        if (edad >= 18) {
+            res.innerText = "Resultado: Acceso concedido (Mayor de edad).";
+        } else {
+            res.innerText = "Resultado: Acceso denegado (Menor de edad).";
+        }
+    }
+
+    // Lógica del Ejercicio 2
+    function generarTabla() {
+        const res = document.getElementById('resTabla');
+        let salida = "";
+        for (let i = 1; i <= 10; i++) {
+            salida += `5 x ${i} = ${5 * i}\n`;
+        }
+        res.innerText = salida;
+    }
+</script>
+
+</body>
+</html>
