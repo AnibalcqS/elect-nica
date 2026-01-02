@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deber 3: Programación Orientada a Objetos</title>
+    <style>
+        :root {
+            --accent: #10b981;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1 { color: var(--accent); font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { color: var(--accent); border-left: 4px solid var(--accent); padding-left: 15px; margin-top: 40px; }
+
+        .pilar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .pilar-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease;
+        }
+
+        .pilar-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+        .pilar-card h3 { color: var(--accent); margin-top: 0; }
+
+        pre {
+            background: #000;
+            color: #5eead4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #1e293b;
+        }
+
+        .exercise-box {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .interactive-area {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        input {
+            background: #334155;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            flex: 1;
+        }
+
+        button {
+            background: var(--accent);
+            color: var(--bg-dark);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover { background: #34d399; }
+
+        .console {
+            background: #000;
+            color: #10b981;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            min-height: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Programación Orientada a Objetos</h1>
+        <p>Entendiendo el paradigma basado en Clases y Objetos</p>
+    </header>
+
+    <section>
+        <h2>1. Clases y Objetos</h2>
+        <p>Imagina una <strong>Clase</strong> como el plano arquitectónico de una casa. No es una casa real, sino el diseño. Un <strong>Objeto</strong> es la casa construida a partir de ese plano.</p>
+        
+        
+
+        <ul>
+            <li><strong>Clase:</strong> El molde o plantilla (ej: Persona).</li>
+            <li><strong>Objeto:</strong> La instancia real (ej: Juan, María).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Los 4 Pilares de la POO</h2>
+        
+        
+        <div class="pilar-grid">
+            <div class="pilar-card">
+                <h3>Encapsulamiento</h3>
+                <p>Oculta los detalles internos y protege los datos, exponiendo solo lo necesario.</p>
+            </div>
+            <div class="pilar-card">
+                <h3>Abstracción</h3>
+                <p>Simplifica modelos complejos mostrando solo las características esenciales.</p>
+            </div>
+            <div class="pilar-card">
+                <h3>Herencia</h3>
+                <p>Permite que una clase nueva tome propiedades de una clase ya existente.</p>
+            </div>
+            <div class="pilar-card">
+                <h3>Polimorfismo</h3>
+                <p>Capacidad de que diferentes objetos respondan al mismo mensaje de formas distintas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Ejemplo de Código</h2>
+        <pre>
+class Vehiculo {
+    constructor(marca) {
+        this.marca = marca;
+    }
+    arrancar() {
+        return `El ${this.marca} está encendido.`;
+    }
+}
+
+// Herencia
+class Auto extends Vehiculo {
+    tocarClaxon() {
+        return "¡Beep beep!";
+    }
+}</pre>
+    </section>
+
+    <section>
+        <h2>4. Ejercicios Interactivos</h2>
+
+        <div class="exercise-box">
+            <h3>Ejercicio 1: Crear una Mascota (Clases y Objetos)</h3>
+            <p>Ingresa el nombre y tipo de animal para crear un objeto:</p>
+            <div class="interactive-area">
+                <input type="text" id="nombreM" placeholder="Nombre (ej: Toby)">
+                <input type="text" id="tipoM" placeholder="Tipo (ej: Perro)">
+                <button onclick="crearMascota()">Instanciar Objeto</button>
+            </div>
+            <div id="outMascota" class="console">Esperando acción...</div>
+        </div>
+
+        <div class="exercise-box">
+            <h3>Ejercicio 2: Sistema de Saludos (Polimorfismo)</h3>
+            <p>Selecciona una clase para ver cómo reacciona al método <code>saludar()</code>:</p>
+            <div class="interactive-area">
+                <button onclick="saludarComo('estudiante')">Como Estudiante</button>
+                <button onclick="saludarComo('profesor')">Como Profesor</button>
+            </div>
+            <div id="outSaludo" class="console">Esperando acción...</div>
+        </div>
+    </section>
+</div>
+
+<script>
+    // --- Lógica Ejercicio 1 ---
+    class Mascota {
+        constructor(nombre, tipo) {
+            this.nombre = nombre;
+            this.tipo = tipo;
+        }
+        describir() {
+            return `Objeto creado: ${this.nombre} es un ${this.tipo}.`;
+        }
+    }
+
+    function crearMascota() {
+        const n = document.getElementById('nombreM').value;
+        const t = document.getElementById('tipoM').value;
+        if(!n || !t) return;
+        
+        const miMascota = new Mascota(n, t);
+        document.getElementById('outMascota').innerText = miMascota.describir();
+    }
+
+    // --- Lógica Ejercicio 2 ---
+    class Persona {
+        saludar() { return "Hola."; }
+    }
+    class Estudiante extends Persona {
+        saludar() { return "¡Hola! Estoy listo para aprender."; }
+    }
+    class Profesor extends Persona {
+        saludar() { return "Buenos días, clase. Abran su libro."; }
+    }
+
+    function saludarComo(tipo) {
+        let p;
+        if(tipo === 'estudiante') p = new Estudiante();
+        else p = new Profesor();
+        
+        document.getElementById('outSaludo').innerText = p.saludar();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deber 2: Funciones en Programación</title>
+    <style>
+        :root {
+            --primary: #8b5cf6;
+            --secondary: #ede9fe;
+            --bg: #f9fafb;
+            --text: #1f2937;
+            --code-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        h1 { color: var(--primary); text-align: center; border-bottom: 3px solid var(--secondary); padding-bottom: 10px; }
+        h2 { color: var(--primary); margin-top: 30px; display: flex; align-items: center; }
+        
+        .info-card {
+            background: var(--secondary);
+            padding: 20px;
+            border-left: 5px solid var(--primary);
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', monospace;
+        }
+
+        .diagram-placeholder {
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+            color: #6b7280;
+        }
+
+        .exercise-section {
+            background: #ffffff;
+            border: 2px dashed var(--primary);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover { background-color: #7c3aed; }
+
+        .res { margin-top: 15px; font-weight: bold; color: #4b5563; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Teoría de Funciones</h1>
+
+    <section>
+        <h2>1. ¿Qué es una Función?</h2>
+        <p>Una función es un <strong>bloque de código reutilizable</strong> diseñado para realizar una tarea específica. En lugar de escribir el mismo código varias veces, lo encerramos en una función y lo "llamamos" cada vez que lo necesitamos.</p>
+        
+        <div class="info-card">
+            <strong>Analogía:</strong> Imagina una función como una receta de cocina. La receta (función) te dice qué pasos seguir. Tú puedes usar esa receta (llamar a la función) cuantas veces quieras para obtener un pastel (resultado).
+        </div>
+
+        <div class="diagram-placeholder">
+            
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Tipos de Funciones y Sintaxis</h2>
+        
+        <h3>A. Función Declarativa (Básica)</h3>
+        <p>Es la forma más común de definir una función.</p>
+        <pre>
+function saludar(nombre) {
+    return "Hola " + nombre;
+}</pre>
+
+        <h3>B. Funciones de Flecha (Arrow Functions)</h3>
+        <p>Una sintaxis moderna y corta muy usada en JavaScript actual.</p>
+        <pre>
+const sumar = (a, b) => a + b;</pre>
+
+        <div class="diagram-placeholder">
+            [Image showing the syntax breakdown of a JavaScript function: keyword, name, parameters, and body]
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>3. Ejercicios Prácticos</h2>
+
+        <div class="exercise-section">
+            <h3>Ejercicio 1: Calculadora de Área</h3>
+            <p>Escribe la base y altura de un triángulo para calcular su área usando una función:</p>
+            <input type="number" id="base" placeholder="Base">
+            <input type="number" id="altura" placeholder="Altura">
+            <button onclick="ejecutarArea()">Calcular Área</button>
+            <div id="resArea" class="res"></div>
+        </div>
+
+        <div class="exercise-section">
+            <h3>Ejercicio 2: Conversor de Temperatura</h3>
+            <p>Ingresa grados Celsius para convertirlos a Fahrenheit:</p>
+            <input type="number" id="celsius" placeholder="°C">
+            <button onclick="ejecutarClima()">Convertir</button>
+            <div id="resClima" class="res"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+    // Función para el Ejercicio 1 (Declarativa)
+    function calcularAreaTriangulo(b, h) {
+        return (b * h) / 2;
+    }
+
+    function ejecutarArea() {
+        const b = parseFloat(document.getElementById('base').value);
+        const h = parseFloat(document.getElementById('altura').value);
+        if (isNaN(b) || isNaN(h)) {
+            document.getElementById('resArea').innerText = "Por favor, llena ambos campos.";
+            return;
+        }
+        const resultado = calcularAreaTriangulo(b, h);
+        document.getElementById('resArea').innerText = `El área es: ${resultado} u²`;
+    }
+
+    // Función para el Ejercicio 2 (Flecha)
+    const convertirCelsiusAFahrenheit = (c) => (c * 9/5) + 32;
+
+    function ejecutarClima() {
+        const c = parseFloat(document.getElementById('celsius').value);
+        if (isNaN(c)) {
+            document.getElementById('resClima').innerText = "Ingresa un valor válido.";
+            return;
+        }
+        const f = convertirCelsiusAFahrenheit(c);
+        document.getElementById('resClima').innerText = `${c}°C equivale a ${f}°F`;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación: Lección 1 - Fundamentos de Programación</title>
+    <style>
+        :root {
+            --primary: #0284c7;
+            --secondary: #64748b;
+            --code-bg: #1e1e1e;
+            --bg: #f8fafc;
+            --card: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        header {
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .section-card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+
+        /* Estilo de Captura de Código (Simulación Visual Studio) */
+        .code-snapshot {
+            background: var(--code-bg);
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 14px;
+            margin: 15px 0;
+            border-left: 5px solid #60a5fa;
+            overflow-x: auto;
+            display: block;
+        }
+
+        .demo-box {
+            background: #f1f5f9;
+            border: 2px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Estilos de la Calculadora */
+        .calc-container {
+            background: #334155;
+            width: 260px;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 0 auto;
+        }
+
+        .calc-screen {
+            width: 100%; height: 50px;
+            background: #cbd5e1;
+            border: none; border-radius: 5px;
+            text-align: right; padding: 10px;
+            font-size: 22px; margin-bottom: 10px;
+            box-sizing: border-box;
+            color: #1e293b;
+        }
+
+        .btn-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        .btn-grid button {
+            padding: 15px; border-radius: 5px; border: none;
+            font-weight: bold; cursor: pointer; transition: 0.2s;
+        }
+        .btn-grid button:hover { opacity: 0.8; }
+        .btn-op { background: #f59e0b; color: white; }
+        .btn-eq { background: #10b981; color: white; }
+        .btn-clear { background: #ef4444; color: white; }
+
+        /* Estilo Composable */
+        .composable-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--primary);
+            box-shadow: 3px 3px 0px var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Lección 1: Actuación en Clase</h1>
+        <p>Consolidación de Conceptos de Expresiones, Operadores y Funciones</p>
+    </header>
+
+    <section class="section-card">
+        <h2>1. ¿Qué es una expresión?</h2>
+        <p>Una <strong>expresión</strong> es cualquier unidad de código válida que se resuelve en un valor. En esencia, es una combinación de variables, constantes y operadores que el intérprete evalúa.</p>
+        
+        <ul>
+            <li><strong>Expresiones Aritméticas:</strong> Evalúan a un número (ej: <code>10 + 5</code>).</li>
+            <li><strong>Expresiones Lógicas:</strong> Evalúan a un booleano (ej: <code>x > y</code>).</li>
+            <li><strong>Expresiones de Cadena:</strong> Evalúan a texto (ej: <code>"Hola " + nombre</code>).</li>
+        </ul>
+    </section>
+
+    <section class="section-card">
+        <h2>2. Tipos de Operadores</h2>
+        <p>Los operadores permiten manipular los valores de las expresiones:</p>
+        
+        <table border="1" cellpadding="10" style="width:100%; border-collapse: collapse; text-align: left;">
+            <tr style="background-color: #f1f5f9;">
+                <th>Tipo</th>
+                <th>Operadores</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td><b>Aritméticos</b></td>
+                <td>+, -, *, /, %</td>
+                <td>Para realizar cálculos matemáticos.</td>
+            </tr>
+            <tr>
+                <td><b>Relacionales</b></td>
+                <td>>, <, >=, <=, ===</td>
+                <td>Comparan dos valores y devuelven True/False.</td>
+            </tr>
+            <tr>
+                <td><b>Lógicos</b></td>
+                <td>&&, ||, !</td>
+                <td>Combinan múltiples condiciones booleanas.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="section-card">
+        <h2>3. 5 Ejercicios sobre Funciones</h2>
+        <p>Código fuente de las soluciones paso a paso:</p>
+        <div class="code-snapshot">
+<pre>
+// 1. Función para duplicar un número
+const duplicar = (n) => n * 2;
+
+// 2. Función para saludar
+const saludar = (nombre) => "Hola, " + nombre;
+
+// 3. Función para validar mayoría de edad
+const esAdulto = (edad) => edad >= 18;
+
+// 4. Función para convertir Celsius a Fahrenheit
+const convertirTemp = (c) => (c * 9/5) + 32;
+
+// 5. Función para calcular área de un cuadrado
+const areaCuadrado = (lado) => lado * lado;
+</pre>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2>4. Composable Text Reutilizable (1 Punto)</h2>
+        <p>Este es el código principal del componente que permite mostrar datos de usuario de forma dinámica:</p>
+        <div class="code-snapshot">
+<pre>
+function ComponenteUsuario(nombre, edad, carrera) {
+    return `
+        &lt;div class="composable-card"&gt;
+            &lt;p&gt;&lt;b&gt;Nombre:&lt;/b&gt; ${nombre}&lt;/p&gt;
+            &lt;p&gt;&lt;b&gt;Edad:&lt;/b&gt; ${edad} años&lt;/p&gt;
+            &lt;p&gt;&lt;b&gt;Carrera:&lt;/b&gt; ${carrera}&lt;/p&gt;
+        &lt;/div&gt;`;
+}
+</pre>
+        </div>
+        <div class="demo-box">
+            <p><strong>Resultado Visual del Composable:</strong></p>
+            <div id="contenedor-composable"></div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <h2>5. Calculadora Básica (2 Puntos)</h2>
+        <p>Código principal de la lógica de procesamiento (Visual Studio):</p>
+        <div class="code-snapshot">
+<pre>
+function resolver() {
+    const screen = document.getElementById('calc-display');
+    try {
+        // eval() procesa la cadena aritmética (ej: "5+5*2")
+        screen.value = eval(screen.value);
+    } catch {
+        screen.value = "Error";
+    }
+}
+</pre>
+        </div>
+        <div class="demo-box">
+            <div class="calc-container">
+                <input type="text" id="calc-display" class="calc-screen" value="0" disabled>
+                <div class="btn-grid">
+                    <button onclick="addNum('7')">7</button><button onclick="addNum('8')">8</button><button onclick="addNum('9')">9</button><button class="btn-op" onclick="addOp('/')">/</button>
+                    <button onclick="addNum('4')">4</button><button onclick="addNum('5')">5</button><button onclick="addNum('6')">6</button><button class="btn-op" onclick="addOp('*')">*</button>
+                    <button onclick="addNum('1')">1</button><button onclick="addNum('2')">2</button><button onclick="addNum('3')">3</button><button class="btn-op" onclick="addOp('-')">-</button>
+                    <button class="btn-clear" onclick="limpiarCalc()">C</button><button onclick="addNum('0')">0</button><button class="btn-eq" onclick="resolver()">=</button><button class="btn-op" onclick="addOp('+')">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    // LÓGICA APARTADO 4: COMPOSABLE
+    function ComponenteUsuario(nombre, edad, carrera) {
+        return `
+            <div class="composable-card">
+                <h4 style="margin:0 0 10px 0; color:#0284c7;">Perfil Estudiantil</h4>
+                <p><strong>Nombre:</strong> ${nombre}</p>
+                <p><strong>Edad:</strong> ${edad} años</p>
+                <p><strong>Carrera:</strong> ${carrera}</p>
+            </div>
+        `;
+    }
+    document.getElementById('contenedor-composable').innerHTML = 
+        ComponenteUsuario("ANIBAL COBACANGO", 21, "Ingeniería en Desarrollo de Software");
+
+    // LÓGICA APARTADO 5: CALCULADORA
+    let display = document.getElementById('calc-display');
+
+    function addNum(n) {
+        if (display.value === "0") display.value = n;
+        else display.value += n;
+    }
+
+    function addOp(op) {
+        display.value += op;
+    }
+
+    function limpiarCalc() {
+        display.value = "0";
+    }
+
+    function resolver() {
+        try {
+            // eval evalúa la expresión matemática en el string del display
+            display.value = eval(display.value);
+        } catch (e) {
+            display.value = "Error";
+            setTimeout(limpiarCalc, 1000);
+        }
+    }
+</script>
+
+</body>
+</html>
