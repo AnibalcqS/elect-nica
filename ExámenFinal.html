@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Final: App RoseControl 🌹</title>
+    <style>
+        :root {
+            --primary: #e11d48; /* Color rosa intenso */
+            --secondary: #4b5563;
+            --success: #10b981;
+            --bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            margin: 0; padding: 20px; color: #334155;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        header {
+            background: linear-gradient(135deg, #e11d48, #9f1239);
+            color: white; padding: 40px; border-radius: 15px;
+            text-align: center; margin-bottom: 30px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .phase {
+            background: white; padding: 30px; border-radius: 12px;
+            margin-bottom: 25px; border-left: 8px solid var(--primary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 { color: var(--primary); margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 10px;}
+        h3 { color: var(--secondary); margin-top: 20px; font-size: 1.2rem; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .data-card { background: #fff1f2; padding: 20px; border-radius: 8px; border: 1px solid #fecdd3; }
+        
+        .badge { background: var(--primary); color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; display: inline-block; }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
+        .figma-btn {
+            display: block; text-align: center; background: #1e1e1e;
+            color: white; padding: 20px; text-decoration: none;
+            border-radius: 10px; font-weight: bold; margin-top: 40px;
+            transition: background 0.3s;
+        }
+        .figma-btn:hover { background: #444; }
+
+        code { background: #fecdd3; padding: 2px 5px; border-radius: 4px; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Proyecto: RoseControl 🌹</h1>
+        <p>Digitalización de Procesos: Del Campo a la Poscosecha</p>
+    </header>
+
+    <section class="phase">
+        <h2>Fase 1: Contacto Inicial</h2>
+        <p><strong>Primera Reunión:</strong> El cliente manifiesta la dificultad de gestionar el envío manual de tallos de las variedades: <code>Candelight, Magic Times, Lola, Paloma, Mondial, Frutteto y Explorer</code>. El uso de papel genera errores de conteo, pérdida de información y retrasos críticos en los reportes de producción diarios.</p>
+        <div class="grid">
+            <div class="data-card">
+                <h3>Necesidad del Cliente</h3>
+                <p>Digitalizar el conteo de tallos en campo para obtener un control exacto y en tiempo real de la materia prima que ingresa a poscosecha.</p>
+            </div>
+            <div class="data-card">
+                <h3>Preguntas de Entendimiento</h3>
+                <ul>
+                    <li>¿Quién registra los datos en el campo (obrero o supervisor)?</li>
+                    <li>¿Las variedades se envían mezcladas o en bloques separados?</li>
+                    <li>¿Se requiere funcionamiento offline por falta de señal en los invernaderos?</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="phase" style="border-left-color: #10b981;">
+        <h2>Fase 2: Levantamiento de Requisitos</h2>
+        <div class="grid">
+            <div class="data-card">
+                <span class="badge">Usuarios</span>
+                <ul>
+                    <li><strong>Supervisor de Campo:</strong> Registra la salida de tallos.</li>
+                    <li><strong>Personal de Poscosecha:</strong> Monitorea ingresos.</li>
+                    <li><strong>Admin:</strong> Analiza estadísticas globales.</li>
+                </ul>
+            </div>
+            <div class="data-card">
+                <span class="badge">Funciones</span>
+                <ul>
+                    <li><strong>Primaria:</strong> Registro de tallos por las 7 variedades.</li>
+                    <li><strong>Primaria:</strong> Base de datos centralizada.</li>
+                    <li><strong>Secundaria:</strong> Reporte diario automático.</li>
+                </ul>
+            </div>
+            <div class="data-card">
+                <span class="badge">Pantallas (UI)</span>
+                <ul>
+                    <li>Pantalla de Selección de Variedad.</li>
+                    <li>Formulario de Cantidad de Tallos.</li>
+                    <li>Historial de Envíos del Turno.</li>
+                </ul>
+            </div>
+            <div class="data-card">
+                <span class="badge">Datos (DB)</span>
+                <ul>
+                    <li>Fecha/Hora, Variedad, Cantidad.</li>
+                    <li>Responsable de cosecha.</li>
+                    <li>Ubicación del bloque de origen.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="data-card" style="margin-top:20px; background:#f0fdf4;">
+            <h3>Restricciones del Sistema</h3>
+            <ul>
+                <li>Solo se permiten números enteros positivos en la cantidad.</li>
+                <li>Acceso restringido solo a variedades autorizadas (7 tipos).</li>
+                <li>Sincronización automática al detectar conexión a internet.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="phase" style="border-left-color: #f59e0b;">
+        <h2>Fase 3: Análisis del Problema</h2>
+        <p>Se define el flujo lógico para reemplazar el registro físico por uno digital infalible:</p>
+        
+        
+
+        <div class="grid">
+            <div class="data-card">
+                <h3>Regla de Negocio</h3>
+                <p>El sistema debe validar que la cantidad ingresada sea lógica. Si se registran más de 500 tallos por bloque en un solo envío, el sistema solicitará una confirmación extra para evitar errores de dedo.</p>
+            </div>
+            <div class="data-card">
+                <h3>Caso de Uso: Registro de Salida</h3>
+                <p><strong>Actor:</strong> Supervisor de Campo</p>
+                <ol>
+                    <li>Selecciona variedad (ej. Mondial).</li>
+                    <li>Ingresa cantidad (ej. 120 tallos).</li>
+                    <li>Confirma envío.</li>
+                    <li>Sistema guarda con marca de tiempo.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="phase" style="border-left-color: #6366f1;">
+        <h2>Fase 4: Diseño de la Solución</h2>
+        <div class="grid">
+             <div class="data-card">
+                <h3>Wireframes (BOCETOS)</h3>
+                 <img src="gemini 1.png" alt="Alineación en Figma" class="screenshot">
+                <img src="gemini 2.png" alt="Alineación en Figma" class="screenshot">
+                
+                
+                 <p></p>
+        
+            </div>
+            <div class="data-card">
+                <h3>Arquitectura</h3>
+                <p>Modelo Cliente-Servidor: App móvil (Android/iOS) conectada vía API a una base de datos centralizada en la nube.</p>
+            </div>
+            <div class="data-card">
+                <h3>Prototipo Figma</h3>
+                <p>Interfaz optimizada para el campo: Botones grandes y colores diferenciados para cada una de las 7 variedades de rosas.</p>
+             <img src="captura figma.png" alt="Alineación en Figma" class="screenshot">
+                   
+            </div>
+             <div class="data-card">
+                <h3>Capturas de autorización</h3>
+                
+             <img src="aprobado1.jpeg" alt="Alineación en Figma" class="screenshot">
+             <img src="aprobado2.jpeg" alt="Alineación en Figma" class="screenshot">
+                   
+            </div>
+        </div>
+    </section>
+
+    <a href="https://www.figma.com/design/f5HGDIc6DC5JHfE7fY8nES/Sin-t%C3%ADtulo?node-id=0-1&t=6Iay3V6CLoViuzNH-1"
+   class="figma-btn"
+   target="_blank"
+   rel="noopener noreferrer">
+   🔗 VER DISEÑO DE FIGMA (APP ROSECONTROL)
+</a>
+
+</div>
+
+</body>
+</html>
