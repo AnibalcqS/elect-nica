@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario Completo de POO</title>
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --secondary: #2c3e50;
+            --bg: #f4f7f6;
+            --code-bg: #282c34;
+            --white: #ffffff;
+            --text: #34495e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 { text-align: center; color: var(--secondary); font-size: 2.5rem; }
+        .intro { text-align: center; margin-bottom: 50px; color: #7f8c8d; }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 6px solid var(--primary);
+        }
+
+        .card h2 { color: var(--primary); margin-top: 0; font-size: 1.5rem; }
+        .card p { margin-bottom: 20px; text-align: justify; }
+
+        .code {
+            background: var(--code-bg);
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre;
+        }
+
+        /* Colores Syntax */
+        .k { color: #c678dd; } /* keyword */
+        .f { color: #61afef; } /* function */
+        .s { color: #98c379; } /* string */
+        .c { color: #5c6370; font-style: italic; } /* comment */
+
+        .video-section {
+            margin-top: 60px;
+            background: var(--secondary);
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%; border: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Domina la Programación Orientada a Objetos</h1>
+    <p class="intro">Conceptos fundamentales explicados con detalle y ejemplos de código en Kotlin.</p>
+
+    <div class="card">
+        <h2>📦 1. Clase</h2>
+        <p>Es la <strong>plantilla o molde</strong> fundamental. Define los datos que tendrá un objeto y las funciones que podrá ejecutar. No ocupa memoria real hasta que se crea un objeto a partir de ella.</p>
+        <div class="code"><span class="k">class</span> <span class="f">Usuario</span> { <span class="c">// Definición de la clase</span> }</div>
+    </div>
+
+    <div class="card">
+        <h2>💎 2. Objeto</h2>
+        <p>Es la <strong>instancia física</strong> de una clase. Si la clase es el plano de una casa, el objeto es la casa construida con ladrillos. Cada objeto tiene su propio estado independiente.</p>
+        <div class="code"><span class="k">val</span> persona = <span class="f">Usuario</span>() <span class="c">// "persona" es el objeto</span></div>
+    </div>
+
+    <div class="card">
+        <h2>🎨 3. Atributos</h2>
+        <p>Son las <strong>variables internas</strong> que describen al objeto. Representan el estado o las características, como el nombre, la edad o el color.</p>
+        <div class="code"><span class="k">var</span> nombre: String = <span class="s">"Juan"</span>
+<span class="k">var</span> edad: Int = <span class="f">25</span></div>
+    </div>
+
+    <div class="card">
+        <h2>⚙️ 4. Métodos</h2>
+        <p>Son las <strong>funciones o acciones</strong> que el objeto puede realizar. Definen el comportamiento y pueden modificar los atributos internos del objeto.</p>
+        <div class="code"><span class="k">fun</span> <span class="f">caminar</span>() { <span class="f">println</span>(<span class="s">"El usuario está caminando"</span>) }</div>
+    </div>
+
+    <div class="card">
+        <h2>🔒 5. Encapsulamiento</h2>
+        <p>Protege la integridad de los datos <strong>ocultando detalles internos</strong>. Se usan modificadores como <em>private</em> para evitar accesos no autorizados desde fuera de la clase.</p>
+        <div class="code"><span class="k">private var</span> clave: String = <span class="s">"1234"</span>
+<span class="k">fun</span> <span class="f">validar</span>() { <span class="c">/* Solo accesible aquí */</span> }</div>
+    </div>
+
+    <div class="card">
+        <h2>🧬 6. Herencia</h2>
+        <p>Permite crear clases nuevas basadas en clases existentes. La clase hija hereda todo el código de la clase padre, facilitando la <strong>reutilización</strong> y jerarquía.</p>
+        <div class="code"><span class="k">open class</span> Animal
+<span class="k">class</span> Perro : <span class="f">Animal</span>() <span class="c">// Perro hereda de Animal</span></div>
+    </div>
+
+    <div class="card">
+        <h2>🎭 7. Polimorfismo</h2>
+        <p>Es la capacidad de un objeto de tomar <strong>múltiples formas</strong>. Un mismo método puede comportarse de forma distinta dependiendo de qué clase lo esté ejecutando.</p>
+        <div class="code"><span class="k">override fun</span> <span class="f">emitirSonido</span>() { <span class="f">println</span>(<span class="s">"Guau"</span>) }</div>
+    </div>
+
+    <div class="card">
+        <h2>☁️ 8. Abstracción</h2>
+        <p>Consiste en <strong>simplificar la complejidad</strong> mostrando solo lo esencial. Ocultamos cómo funciona algo por dentro y solo mostramos qué hace (la interfaz).</p>
+        <div class="code"><span class="k">abstract class</span> <span class="f">Forma</span> { <span class="k">abstract fun</span> <span class="f">dibujar</span>() }</div>
+    </div>
+
+    <div class="card">
+        <h2>🔌 9. Interfaz</h2>
+        <p>Es un <strong>contrato u obligación</strong>. Define qué métodos debe tener una clase, pero no dice cómo hacerlos. Es ideal para que clases distintas compartan comportamientos.</p>
+        <div class="code"><span class="k">interface</span> <span class="f">Accion</span> { <span class="k">fun</span> <span class="f">ejecutar</span>() }</div>
+    </div>
+
+    <div class="card">
+        <h2>🏗️ 10. Constructor</h2>
+        <p>Método especial que <strong>inicializa el objeto</strong> al momento de su creación. Asegura que el objeto tenga todos los datos necesarios para empezar a funcionar correctamente.</p>
+        <div class="code"><span class="k">class</span> <span class="f">Socio</span>(<span class="k">val</span> id: Int, <span class="k">val</span> nombre: String)</div>
+    </div>
+
+    <div class="video-section">
+        <h2>🎥 Video Explicativo</h2>
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1GBNJJdqUi1q7ds1IuPPaLCM4JdnF7VWx/preview" allow="autoplay"></iframe>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
