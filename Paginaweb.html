@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto Android - Gestión Agrícola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2e7d32, #66bb6a);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        section {
+            padding: 40px 10%;
+        }
+
+        h2 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .images img {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sistema de Gestión Agrícola</h1>
+    <p>Aplicación desarrollada en Android con tecnologías modernas</p>
+</header>
+
+<section>
+    <h2>📌 Descripción del Proyecto</h2>
+    <p>
+        Aplicación móvil desarrollada en Kotlin y Jetpack Compose que permite
+        gestionar producción agrícola, administrar productos agroquímicos,
+        realizar operaciones CRUD y consumir datos desde una API REST externa.
+    </p>
+</section>
+
+<section>
+    <h2>🚀 Tecnologías Utilizadas</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Kotlin</h3>
+            <p>Lenguaje moderno que mejora la productividad y seguridad en Android.</p>
+        </div>
+
+        <div class="card">
+            <h3>Jetpack Compose</h3>
+            <p>Framework declarativo para construir interfaces dinámicas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Firebase Firestore</h3>
+            <p>Base de datos NoSQL en la nube para almacenar registros.</p>
+        </div>
+
+        <div class="card">
+            <h3>Retrofit</h3>
+            <p>Librería para consumo eficiente de APIs REST.</p>
+        </div>
+
+        <div class="card">
+            <h3>Android Studio</h3>
+            <p>Entorno de desarrollo utilizado para crear la aplicación.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>💻 Conceptos de Programación Aplicados</h2>
+
+    <h3>🔹 Sentencias de Control</h3>
+    <ul>
+        <li>Uso de <strong>if</strong> para validaciones.</li>
+        <li>Uso de <strong>when</strong> para selección de opciones.</li>
+        <li>Uso de ciclos <strong>for</strong> para recorrer listas.</li>
+    </ul>
+
+    <h3>🔹 Funciones</h3>
+    <p>
+        Se implementaron funciones para guardar, editar y eliminar registros,
+        permitiendo modularidad y reutilización del código.
+    </p>
+
+    <h3>🔹 Programación Orientada a Objetos (POO)</h3>
+    <p>
+        Se utilizaron clases como <strong>RegistroProduccion</strong> y <strong>Producto</strong>,
+        aplicando encapsulación y organización estructurada del código.
+    </p>
+</section>
+
+<section>
+    <h2>🖼️ Imágenes del Proyecto</h2>
+
+    <div class="images">
+        <!-- Reemplaza con tus imágenes -->
+        <img src="A1.jpeg" alt="Pantalla Registro">
+        <img src="A2.jpeg" alt="Pantalla Historial">
+        <img src="A3.jpeg" alt="Pantalla Tienda">
+        <img src="A4.jpeg" alt="Pantalla Tienda">
+        <img src="A5.jpeg" alt="Pantalla Tienda">
+        <img src="A6.jpeg" alt="Pantalla Tienda">
+        <img src="A7.jpeg" alt="Pantalla Tienda">
+    </div>
+</section>
+
+<footer>
+    <p>Proyecto Académico - Desarrollo de Aplicaciones Móviles 2026</p>
+</footer>
+
+</body>
+</html>
